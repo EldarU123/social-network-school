@@ -1,0 +1,85 @@
+<!doctype html>
+
+<head>
+    <title> ISP Connect</title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon' >
+    </head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="design.css">
+    <center>
+
+
+    <body>
+    
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card, frontpageheader">
+            <a href="/" class="w3-bar-item w3-button"><b>ISP Connect</b></a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="/" class="w3-bar-item w3-button">Home</a>
+                <a href="meeting.html" class="w3-bar-item w3-button">Teachers to Parents</a>
+                <a href="parents.html" class="w3-bar-item w3-button">Parents to Parents</a>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+        <img class="w3-image" src="https://www.isp.cz/wp-content/uploads/2017/06/bg-campus-alt.jpg" alt="Architecture" width="2500" height="400" >
+        <div class="w3-display-middle w3-margin-top w3-center">
+            <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>ISP Connect</b></span> </h1>
+        </div>
+    </header>
+
+<br>
+<br>
+<table>
+    <tr>
+        <th>
+        </th>
+        <th>
+    <p>Teachers to Parents</p>
+    
+        </th>
+    </tr>
+</table>
+<br>
+<br>
+
+
+
+<div style="float: left; border-width: 20px; border: black; margin-left: 200px;">
+ 
+ <form action='/meeting.html' method='POST'>
+    <input placeholder='Name' name='mname'>
+    <input placeholder='Post Content' name='mpost'>
+    <input type='submit' value='Submit'>
+</form>
+</div>
+
+<div style = "float: right; border: black; margin-right: 400px;">
+
+{% for mpost in mposts %}
+    <div>{{ mpost[1] + ': ' + mpost[2] }}</div>
+{% endfor %}
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+    </body>
+</center>
+</html>
